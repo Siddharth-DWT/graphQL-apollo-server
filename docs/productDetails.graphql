@@ -1,0 +1,17 @@
+query ProductDetails($productDetailsId: [ID!]) {
+    productDetails(id: $productDetailsId) {
+        productId
+        allOptions {
+            type
+            sortPriority
+            options {
+                id
+                message
+                sortPriority
+                status
+                type
+                value
+            }
+        }
+    }
+}
